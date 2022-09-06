@@ -1,16 +1,18 @@
 <template>
-  <div class="x"></div>
+  <div class="home"></div>
 </template>
 
 <script setup></script>
 
 <style lang="less" scoped>
-@width: 367;
-@height: 315;
+@height: 99;
 
-.x {
-  width: (@width / 2420) * 100rem;
+.home {
   height: (@height / 2420) * 100rem;
   border: 1px solid red;
+  // 引入图片
+  background-image: url("../imgs/header.png");
+  // 让图片占满
+  background-size: cover;
 }
 </style>
