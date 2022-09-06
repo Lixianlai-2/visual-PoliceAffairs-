@@ -18,6 +18,8 @@
       }
       // pageHeight是为了满足16:9展示而计算出来的页面展示高度
       let pageHeight = clientWidth / (16 / 9);
+
+      // 动态设置rem，始终为宽度的百分之一
       const string = `<style>html {
         font-size:${pageWidth / 100}px
       } </style>`;
@@ -26,10 +28,16 @@
   </head>
   <body>
     <div id="app"></div>
-    <script type="module" src="/src/main.js">
-      const root = document.querySelector('#root')
-      root.style.width = pageWidth + 'px'
-      root.style.height = pageHeight + 'px'
+    <script type="module" src="/src/main.js"></script>
+    <script>
+      // 必须另起一个script标签设置下面的内容才生效
+      // 动态设置app容器的宽高，始终保持16:9
+      const app = document.querySelector("#app");
+      app.style.width = pageWidth + "px";
+      app.style.height = pageHeight + "px";
+
+      // 设置垂直居中，把多余空间的一半作为margin-top
+      app.style.marginTop = (clientHeight - pageHeight) / 2 + "px";
     </script>
   </body>
 </html>
