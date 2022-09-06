@@ -9,6 +9,7 @@
       // 得到当前浏览器的高度和宽度
       const clientWidth = document.documentElement.clientWidth;
       const clientHeight = document.documentElement.clientHeight;
+
       // pageWidth是为了满足16:9展示而计算出来的页面展示宽度
       let pageWidth;
       if (clientWidth / clientHeight > 16 / 9) {
@@ -16,6 +17,7 @@
       } else {
         pageWidth = clientWidth;
       }
+
       // pageHeight是为了满足16:9展示而计算出来的页面展示高度
       let pageHeight = clientWidth / (16 / 9);
 
@@ -23,6 +25,8 @@
       const string = `<style>html {
         font-size:${pageWidth / 100}px
       } </style>`;
+
+      // 把上面的style设置，写在网页中
       document.write(string);
     </script>
   </head>
