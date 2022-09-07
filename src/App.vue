@@ -1,5 +1,18 @@
 <script setup>
+import { onMounted } from "@vue/runtime-core";
 import Home from "./components/Home.vue";
+// 重新渲染页面时滚动到顶部
+const scrollToTop = () => {
+  let sTop = document.documentElement.scrollTop || document.body.scrollTop;
+  if (sTop > 0) {
+    window.requestAnimationFrame(scrollToTop);
+    window.scrollTo(0, sTop - sTop / 8);
+  }
+};
+onMounted(() => {
+  // 挂载时滚动到顶部
+  scrollToTop();
+});
 </script>
 
 <template>

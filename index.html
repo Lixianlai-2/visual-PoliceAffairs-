@@ -18,8 +18,8 @@
         pageWidth = clientWidth;
       }
 
-      // pageHeight是为了满足16:9展示而计算出来的页面展示高度
-      let pageHeight = clientWidth / (16 / 9);
+      // pageHeight是为了满足16:9展示而通过计算出来的宽度再次计算出来的页面展示高度
+      let pageHeight = pageWidth / (16 / 9);
 
       // 动态设置rem，始终为宽度的百分之一
       const string = `<style>html {
