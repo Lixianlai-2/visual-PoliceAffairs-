@@ -28,7 +28,12 @@ onMounted(() => {
   </div>
 </template>
 
-<style lang="less">
+<style lang="scss">
+@import "./shared/helper.scss";
+// @function px($n) {
+//   @return calc($n / 2420 * 100rem);
+// }
+
 #app {
   display: flex;
   flex-direction: column;
@@ -47,6 +52,9 @@ main {
     "box1 box2 box4 box5"
     "box1 box2 box4 box5"
     "box3 box3 box4 box5";
+  // 增加间隙
+  row-gap: px(28);
+  column-gap: px(25);
 }
 
 .box1 {

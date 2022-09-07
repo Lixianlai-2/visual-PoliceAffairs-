@@ -4,11 +4,13 @@
 
 <script setup></script>
 
-<style lang="less" scoped>
-@height: 99;
+<style lang="scss" scoped>
+@function px($n) {
+  @return calc($n / 2420 * 100rem);
+}
 
 .home {
-  height: (@height / 2420) * 100rem;
+  height: px(99);
   border: 1px solid red;
   // 引入图片
   background-image: url("../imgs/header.png");
