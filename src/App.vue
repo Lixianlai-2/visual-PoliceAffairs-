@@ -30,13 +30,11 @@ onMounted(() => {
 
 <style lang="scss">
 @import "./shared/helper.scss";
-// @function px($n) {
-//   @return calc($n / 2420 * 100rem);
-// }
 
 #app {
   display: flex;
   flex-direction: column;
+  background: #00051a;
 }
 
 .root {
@@ -46,35 +44,44 @@ onMounted(() => {
 }
 
 main {
+  padding-top: 10px;
   flex: 1;
   display: grid;
-  grid-template-areas:
-    "box1 box2 box4 box5"
-    "box1 box2 box4 box5"
-    "box3 box3 box4 box5";
+  // grid-template-areas:
+  //   "box1 box2 box4 box5"
+  //   "box1 box2 box4 box5"
+  //   "box3 box3 box4 box5";
+  // 自动根据fr比例伸缩
+  grid-template:
+  //  fr部分，相当于grid-template-rows / grid-template-columns
+  //  先决定有几行，每一行有多高；然后决定有几列，每一列有多宽
+    "box1 box2 box4 box5" 755fr // 这里的755fr是按比例决定一行有多高
+    // 这里的363fr也是决定的行高，/ 后面的fr部分，决定的是每一列分别有多宽
+    "box3 box3 box4 box5" 363fr / 366fr 361fr 811fr 747fr;
+
   // 增加间隙
   row-gap: px(28);
   column-gap: px(25);
+  > section {
+    border: 1px solid #0e305c;
+    border-radius: 4px;
+    background: #0c0d2e;
+  }
 }
 
 .box1 {
   grid-area: box1;
-  background: pink;
 }
 .box2 {
-  background: green;
   grid-area: box2;
 }
 .box3 {
-  background: rgb(57, 201, 153);
   grid-area: box3;
 }
 .box4 {
-  background: rgb(50, 32, 170);
   grid-area: box4;
 }
 .box5 {
-  background: rgb(183, 13, 95);
   grid-area: box5;
 }
 </style>

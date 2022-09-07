@@ -11,7 +11,6 @@
 
 .home {
   height: px(99);
-  border: 1px solid red;
   // 引入图片
   background-image: url("../imgs/header.png");
   // 让图片占满

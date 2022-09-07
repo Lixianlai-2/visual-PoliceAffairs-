@@ -9,6 +9,10 @@ body {
   height: 100%;
 }
 
+body {
+  background: #000211;
+}
+
 #app {
   margin: 0 auto;
   background: skyblue;
