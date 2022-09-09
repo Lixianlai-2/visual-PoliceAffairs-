@@ -2,6 +2,7 @@
 import { onMounted } from "@vue/runtime-core";
 import Header from "./components/Header.vue";
 import Chart1 from "./components/Chart1.vue";
+import Chart2 from "./components/Chart2.vue";
 
 // 重新渲染页面时滚动到顶部
 const scrollToTop = () => {
@@ -24,6 +25,7 @@ onMounted(() => {
     <main>
       <section class="box1">
         <Chart1 />
+        <Chart2 />
       </section>
       <section class="box2"></section>
       <section class="box3"></section>
@@ -83,6 +85,9 @@ main {
 
 .box1 {
   grid-area: box1;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid red;
 }
 
 .box2 {

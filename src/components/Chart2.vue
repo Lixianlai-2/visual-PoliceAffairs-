@@ -1,6 +1,6 @@
 <template>
-  <div class="bordered 管辖统计">
-    <h2>管辖统计部分</h2>
+  <div class="bordered 按键破获排名">
+    <h2>按键破获排名</h2>
     <div class="chart" ref="chart"></div>
   </div>
 </template>
@@ -14,8 +14,6 @@ import px from "../shared/px";
 const chart = ref(null);
 
 onMounted(() => {
-  //   console.log(chart.value); //跟下面一行的作用是一样的
-  //   console.log(document.querySelector(".chart"));
   initEcharts();
 });
 
@@ -28,65 +26,61 @@ const initEcharts = function () {
     }
   };
 
-  // 基于准备好的dom，初始化echarts实例
   var myChart = echarts.init(chart.value); //
-  //   var myChart = echarts.init(document.querySelector(".chart"));
-  // 绘制图表
+
   myChart.setOption({
-    // textStyle: {
-    //   fontSize: px(12),
-    // },
-    xAxis: {
-      data: [
-        "兰州新区",
-        "兰州新区",
-        "兰州新区",
-        "兰州新区",
-        "兰州新区",
-        "兰州新区",
-        "兰州新区",
-        "兰州新区",
-        "兰州新区",
-      ],
-      axisLabel: {
-        fontSize: px(12),
-        formatter(val) {
-          if (val.length > 2) {
-            const arr = val.split("");
-            arr.splice(2, 0, "\n");
-            return arr.join("");
-          } else {
-            return val;
-          }
-        },
-      },
+    grid: {
+      x: px(80),
+      y: px(23),
+      // 决定x轴的压缩像素，表格往左移动
+      x2: px(20),
+      // 决定y轴的压缩像素，表格往上移动
+      y2: px(50),
     },
-    yAxis: {
+    xAxis: {
+      type: "value",
+      boundaryGap: [0, 0.01],
       axisLabel: {
         fontSize: px(12),
       },
-      // 去除折线图的分割线
+      // 移除x轴上面的白色横线
       splitLine: {
         show: false,
       },
     },
+    yAxis: {
+      type: "category",
+      data: [
+        "城关区公安局",
+        "七里河区公安局",
+        "西固区公安局",
+        "安宁区公安局",
+        "红古区公安局",
+        "永登县公安局",
+        "皋兰县公安局",
+        "榆中县公安局",
+        "新区公安局",
+      ],
+      axisLabel: {
+        fontSize: px(12),
+        formatter(val) {
+          // y轴字体换行
+          return val.replace("公安局", "\n公安局");
+        },
+      },
+    },
     series: [
       {
-        name: "销量",
+        name: "2011",
         type: "bar",
-        data: [5, 20, 36, 10, 10, 20, 20, 20, 20],
+        data: [1, 2, 3, 4, 5, 6, 7, 8, 9],
+      },
+      {
+        name: "2012",
+        type: "bar",
+        data: [2, 3, 4, 5, 6, 7, 8, 9, 10],
       },
     ],
-    // 去除表格的多余空间
-    grid: {
-      x: px(47),
-      y: px(23),
-      // 决定x轴的压缩像素，表格往左移动
-      x2: px(15),
-      // 决定y轴的压缩像素，表格往上移动
-      y2: px(70),
-      // containLabel: true,
-    },
   });
 };
 // 重新渲染页面时滚动到顶部
@@ -95,7 +89,9 @@ const initEcharts = function () {
 <style lang="scss" scoped>
 @import "../shared/helper.scss";
 
-.管辖统计 {
+.按键破获排名 {
+  // margin-top: px(30);
+  flex: 1;
   height: px(315);
   display: flex;
   flex-direction: column;
