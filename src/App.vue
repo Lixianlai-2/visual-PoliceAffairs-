@@ -88,14 +88,21 @@ main {
   grid-area: box1;
   .管辖统计 {
     height: px(315);
-
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     h2 {
       border: 1px solid #04498f;
       text-shadow: 0 0 2px white;
       text-align: center;
-      display: inline-block;
       border-bottom-right-radius: px(10);
       border-bottom-left-radius: px(10);
+    }
+
+    div {
+      border: 1px solid red;
+      flex: 1;
+      width: 100%;
     }
   }
 }
