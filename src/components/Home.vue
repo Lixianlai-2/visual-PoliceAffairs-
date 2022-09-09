@@ -2,7 +2,10 @@
   <div class="home"></div>
 </template>
 
-<script setup></script>
+<script setup>
+console.log("from Home.vue", window.pageWidth);
+console.log("from Home.vue", window.pageHeight);
+</script>
 
 <style lang="scss" scoped>
 @function px($n) {

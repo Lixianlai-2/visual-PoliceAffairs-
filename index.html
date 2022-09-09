@@ -16,7 +16,7 @@
       const clientHeight = document.documentElement.clientHeight;
 
       // pageWidth是为了满足16:9展示而计算出来的页面展示宽度
-      let pageWidth;
+      var pageWidth;
       if (clientWidth / clientHeight > 16 / 9) {
         pageWidth = clientHeight * (16 / 9);
       } else {

@@ -22,7 +22,12 @@ onMounted(() => {
   <div class="root">
     <Home />
     <main>
-      <section class="box1"></section>
+      <section class="box1">
+        <div class="bordered 管辖统计">
+          <h2>管辖统计部分</h2>
+          <div class="chart"></div>
+        </div>
+      </section>
       <section class="box2"></section>
       <section class="box3"></section>
       <section class="box4"></section>
@@ -68,12 +73,31 @@ main {
   > section {
     border: 1px solid #0e305c;
     border-radius: 4px;
-    background: #0c0d2e;
+    // background: #0c0d2e;
+    text-align: center;
   }
+}
+
+.bordered {
+  border: 1px solid #0e305c;
+  border-radius: 4px;
+  background: #0c0d2e;
 }
 
 .box1 {
   grid-area: box1;
+  .管辖统计 {
+    height: px(315);
+
+    h2 {
+      border: 1px solid #04498f;
+      text-shadow: 0 0 2px white;
+      text-align: center;
+      display: inline-block;
+      border-bottom-right-radius: px(10);
+      border-bottom-left-radius: px(10);
+    }
+  }
 }
 .box2 {
   grid-area: box2;
