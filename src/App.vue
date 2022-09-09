@@ -1,13 +1,11 @@
 <script setup>
 import { onMounted } from "@vue/runtime-core";
-import Home from "./components/Home.vue";
-import * as echarts from "echarts";
+import Header from "./components/Header.vue";
+import Box1 from "./components/Box1.vue";
 
 const px = function (n) {
   return (n / 2420) * window.pageWidth;
 };
-
-console.log(px(100));
 
 // 重新渲染页面时滚动到顶部
 const scrollToTop = () => {
@@ -18,84 +16,17 @@ const scrollToTop = () => {
   }
 };
 
-const initEcharts = function () {
-  // 基于准备好的dom，初始化echarts实例
-  var myChart = echarts.init(document.querySelector(".chart"));
-  // 绘制图表
-  myChart.setOption({
-    textStyle: {
-      // fontSize: px(12),
-    },
-    xAxis: {
-      data: [
-        "兰州新区",
-        "兰州新区",
-        "兰州新区",
-        "兰州新区",
-        "兰州新区",
-        "兰州新区",
-        "兰州新区",
-        "兰州新区",
-        "兰州新区",
-      ],
-      axisLabel: {
-        fontSize: px(12),
-        formatter(val) {
-          if (val.length > 2) {
-            const arr = val.split("");
-            arr.splice(2, 0, "\n");
-            return arr.join("");
-          } else {
-            return val;
-          }
-        },
-      },
-    },
-    yAxis: {
-      axisLabel: {
-        fontSize: px(12),
-      },
-      // 去除折线图的分割线
-      splitLine: {
-        show: false,
-      },
-    },
-    series: [
-      {
-        name: "销量",
-        type: "bar",
-        data: [5, 20, 36, 10, 10, 20, 20, 20, 20],
-      },
-    ],
-    // 去除表格的多余空间
-    grid: {
-      x: px(47),
-      y: px(23),
-      // 决定x轴的压缩像素，表格往左移动
-      x2: px(15),
-      // 决定y轴的压缩像素，表格往上移动
-      y2: px(70),
-    },
-  });
-};
-
 onMounted(() => {
   // 挂载时滚动到顶部
   scrollToTop();
-  initEcharts();
 });
 </script>
 
 <template>
   <div class="root">
-    <Home />
+    <Header />
     <main>
-      <section class="box1">
-        <div class="bordered 管辖统计">
-          <h2>管辖统计部分</h2>
-          <div class="chart"></div>
-        </div>
-      </section>
+      <Box1></Box1>
       <section class="box2"></section>
       <section class="box3"></section>
       <section class="box4"></section>
@@ -152,30 +83,6 @@ main {
   background: #0c0d2e;
 }
 
-.box1 {
-  grid-area: box1;
-  .管辖统计 {
-    height: px(315);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    h2 {
-      font-size: px(22);
-      line-height: px(24);
-      padding: px(10) px(28);
-      border: 1px solid #04498f;
-      text-shadow: 0 0 2px white;
-      text-align: center;
-      border-bottom-right-radius: px(10);
-      border-bottom-left-radius: px(10);
-    }
-
-    div {
-      flex: 1;
-      width: 100%;
-    }
-  }
-}
 .box2 {
   grid-area: box2;
 }
