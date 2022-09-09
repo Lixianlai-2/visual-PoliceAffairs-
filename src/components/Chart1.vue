@@ -1,10 +1,8 @@
 <template>
-  <section class="box1">
-    <div class="bordered 管辖统计">
-      <h2>管辖统计部分</h2>
-      <div class="chart" ref="chart"></div>
-    </div>
-  </section>
+  <div class="bordered 管辖统计">
+    <h2>管辖统计部分</h2>
+    <div class="chart" ref="chart"></div>
+  </div>
 </template>
 
 <script setup>

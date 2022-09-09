@@ -1,11 +1,7 @@
 <script setup>
 import { onMounted } from "@vue/runtime-core";
 import Header from "./components/Header.vue";
-import Box1 from "./components/Box1.vue";
-
-const px = function (n) {
-  return (n / 2420) * window.pageWidth;
-};
+import Chart1 from "./components/Chart1.vue";
 
 // 重新渲染页面时滚动到顶部
 const scrollToTop = () => {
@@ -26,7 +22,9 @@ onMounted(() => {
   <div class="root">
     <Header />
     <main>
-      <Box1></Box1>
+      <section class="box1">
+        <Chart1 />
+      </section>
       <section class="box2"></section>
       <section class="box3"></section>
       <section class="box4"></section>
@@ -81,6 +79,10 @@ main {
   border: 1px solid #0e305c;
   border-radius: 4px;
   background: #0c0d2e;
+}
+
+.box1 {
+  grid-area: box1;
 }
 
 .box2 {
