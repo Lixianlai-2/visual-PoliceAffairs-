@@ -1,8 +1,14 @@
 <script setup>
 import { onMounted } from "@vue/runtime-core";
 import Home from "./components/Home.vue";
+import * as echarts from "echarts";
 
 console.log(`window.pageWidth`, window.pageWidth);
+const px = function (n) {
+  return (n / 2420) * (window.pageWidth / 100);
+};
+
+console.log(px(100));
 
 // 重新渲染页面时滚动到顶部
 const scrollToTop = () => {
@@ -12,9 +18,48 @@ const scrollToTop = () => {
     window.scrollTo(0, sTop - sTop / 8);
   }
 };
+
+const initEcharts = function () {
+  // 基于准备好的dom，初始化echarts实例
+  var myChart = echarts.init(document.querySelector(".chart"));
+  // 绘制图表
+  myChart.setOption({
+    xAxis: {
+      data: ["衬衫", "羊毛衫", "雪纺衫", "裤子", "高跟鞋", "袜子"],
+      axisLabel: {
+        fontSize: 6,
+      },
+    },
+    yAxis: {
+      axisLabel: {
+        fontSize: 6,
+      },
+      // 去除折线图的分割线
+      splitLine: {
+        show: false,
+      },
+    },
+    series: [
+      {
+        name: "销量",
+        type: "bar",
+        data: [5, 20, 36, 10, 10, 20],
+      },
+    ],
+    // 去除表格的多余空间
+    grid: {
+      x: 20,
+      y: 20,
+      x2: 20,
+      y2: 20,
+    },
+  });
+};
+
 onMounted(() => {
   // 挂载时滚动到顶部
   scrollToTop();
+  initEcharts();
 });
 </script>
 
