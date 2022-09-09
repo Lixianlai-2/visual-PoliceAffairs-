@@ -3,9 +3,8 @@ import { onMounted } from "@vue/runtime-core";
 import Home from "./components/Home.vue";
 import * as echarts from "echarts";
 
-console.log(`window.pageWidth`, window.pageWidth);
 const px = function (n) {
-  return (n / 2420) * (window.pageWidth / 100);
+  return (n / 2420) * window.pageWidth;
 };
 
 console.log(px(100));
@@ -24,15 +23,37 @@ const initEcharts = function () {
   var myChart = echarts.init(document.querySelector(".chart"));
   // 绘制图表
   myChart.setOption({
+    textStyle: {
+      // fontSize: px(12),
+    },
     xAxis: {
-      data: ["衬衫", "羊毛衫", "雪纺衫", "裤子", "高跟鞋", "袜子"],
+      data: [
+        "兰州新区",
+        "兰州新区",
+        "兰州新区",
+        "兰州新区",
+        "兰州新区",
+        "兰州新区",
+        "兰州新区",
+        "兰州新区",
+        "兰州新区",
+      ],
       axisLabel: {
-        fontSize: 6,
+        fontSize: px(12),
+        formatter(val) {
+          if (val.length > 2) {
+            const arr = val.split("");
+            arr.splice(2, 0, "\n");
+            return arr.join("");
+          } else {
+            return val;
+          }
+        },
       },
     },
     yAxis: {
       axisLabel: {
-        fontSize: 6,
+        fontSize: px(12),
       },
       // 去除折线图的分割线
       splitLine: {
@@ -43,15 +64,15 @@ const initEcharts = function () {
       {
         name: "销量",
         type: "bar",
-        data: [5, 20, 36, 10, 10, 20],
+        data: [5, 20, 36, 10, 10, 20, 20, 20, 20],
       },
     ],
     // 去除表格的多余空间
     grid: {
-      x: 20,
-      y: 20,
-      x2: 20,
-      y2: 20,
+      x: px(50),
+      y: px(40),
+      x2: px(40),
+      y2: px(40),
     },
   });
 };
@@ -145,7 +166,6 @@ main {
     }
 
     div {
-      border: 1px solid red;
       flex: 1;
       width: 100%;
     }
