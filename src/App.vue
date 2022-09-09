@@ -69,10 +69,12 @@ const initEcharts = function () {
     ],
     // 去除表格的多余空间
     grid: {
-      x: px(50),
-      y: px(40),
-      x2: px(40),
-      y2: px(40),
+      x: px(47),
+      y: px(23),
+      // 决定x轴的压缩像素，表格往左移动
+      x2: px(15),
+      // 决定y轴的压缩像素，表格往上移动
+      y2: px(70),
     },
   });
 };
@@ -158,6 +160,9 @@ main {
     flex-direction: column;
     align-items: center;
     h2 {
+      font-size: px(22);
+      line-height: px(24);
+      padding: px(10) px(28);
       border: 1px solid #04498f;
       text-shadow: 0 0 2px white;
       text-align: center;
