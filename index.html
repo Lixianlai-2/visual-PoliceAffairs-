@@ -5,7 +5,12 @@
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>大屏可视化项目</title>
-    <script>
+    <script></script>
+  </head>
+  <body>
+    <div id="app"></div>
+    <script type="module" src="/src/main.js"></script>
+    <!-- <script>
       // 得到当前浏览器的高度和宽度
       const clientWidth = document.documentElement.clientWidth;
       const clientHeight = document.documentElement.clientHeight;
@@ -28,12 +33,6 @@
 
       // 把上面的style设置，写在网页中
       document.write(string);
-    </script>
-  </head>
-  <body>
-    <div id="app"></div>
-    <script type="module" src="/src/main.js"></script>
-    <script>
       // 必须另起一个script标签设置下面的内容才生效
       // 动态设置app容器的宽高，始终保持16:9
       const app = document.querySelector("#app");
@@ -42,6 +41,7 @@
 
       // 设置垂直居中，把多余空间的一半作为margin-top
       app.style.marginTop = (clientHeight - pageHeight) / 2 + "px";
-    </script>
+    </script> -->
+    <script src="/src/basic.js"></script>
   </body>
 </html>

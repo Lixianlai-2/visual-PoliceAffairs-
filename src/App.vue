@@ -1,6 +1,9 @@
 <script setup>
 import { onMounted } from "@vue/runtime-core";
 import Home from "./components/Home.vue";
+
+console.log(`window.pageWidth`, window.pageWidth);
+
 // 重新渲染页面时滚动到顶部
 const scrollToTop = () => {
   let sTop = document.documentElement.scrollTop || document.body.scrollTop;
