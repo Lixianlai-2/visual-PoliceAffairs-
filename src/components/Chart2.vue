@@ -1,7 +1,11 @@
 <template>
-  <div class="bordered 按键破获排名">
-    <h2>按键破获排名</h2>
+  <div class="bordered 案件破获排名">
+    <h2>案件破获排名</h2>
     <div class="chart" ref="chart"></div>
+    <!-- <div class="legend">
+      <span class="first">破案排名1</span>
+      <span class="second">破案排名2</span>
+    </div> -->
   </div>
 </template>
 
@@ -29,13 +33,23 @@ const initEcharts = function () {
   var myChart = echarts.init(chart.value); //
 
   myChart.setOption({
+    legend: {
+      top: px(5),
+      itemHeight: px(15), // 设置说明图例高度
+      itemWidth: px(20), // 设置说明图例宽度
+      itemGap: px(10), // 设置说明图例的间距
+      textStyle: {
+        fontSize: px(12), //修改说明文字的大小
+        color: "#fbe4ae",
+        padding: [0, 0, 0, -3], //设置文字跟说明图例之间的距离
+      },
+    },
     grid: {
       x: px(80),
-      y: px(23),
+      y: px(50),
       // 决定x轴的压缩像素，表格往左移动
-      x2: px(20),
-      // 决定y轴的压缩像素，表格往上移动
-      y2: px(50),
+      x2: px(40), // 表格从右边往左边压缩
+      y2: px(60), // 决定表格从下方往上移动
     },
     xAxis: {
       type: "value",
@@ -71,14 +85,42 @@ const initEcharts = function () {
     },
     series: [
       {
-        name: "2011",
+        name: "案件排名1",
         type: "bar",
         data: [1, 2, 3, 4, 5, 6, 7, 8, 9],
+        itemStyle: {
+          normal: {
+            color: new echarts.graphic.LinearGradient(0, 0, 1, 0, [
+              {
+                offset: 0,
+                color: "#1f36f9",
+              },
+              {
+                offset: 1,
+                color: "#059fff",
+              },
+            ]),
+          },
+        },
       },
       {
-        name: "2012",
+        name: "案件排名2",
         type: "bar",
         data: [2, 3, 4, 5, 6, 7, 8, 9, 10],
+        itemStyle: {
+          normal: {
+            color: new echarts.graphic.LinearGradient(0, 0, 1, 0, [
+              {
+                offset: 0,
+                color: "#b82be8",
+              },
+              {
+                offset: 1,
+                color: "#6670e2",
+              },
+            ]),
+          },
+        },
       },
     ],
   });
@@ -89,7 +131,7 @@ const initEcharts = function () {
 <style lang="scss" scoped>
 @import "../shared/helper.scss";
 
-.按键破获排名 {
+.案件破获排名 {
   // margin-top: px(30);
   flex: 1;
   height: px(315);
