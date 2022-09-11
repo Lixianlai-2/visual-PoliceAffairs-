@@ -119,7 +119,7 @@ const initEcharts = function () {
 @import "../shared/helper.scss";
 
 .案发趋势分析 {
-  height: px(420);
+  height: px(415);
   display: flex;
   flex-direction: column;
   align-items: center;

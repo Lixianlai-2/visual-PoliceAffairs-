@@ -4,6 +4,7 @@ import Header from "./components/Header.vue";
 import Chart1 from "./components/Chart1.vue";
 import Chart2 from "./components/Chart2.vue";
 import Chart3 from "./components/Chart3.vue";
+import Chart4 from "./components/Chart4.vue";
 
 // 重新渲染页面时滚动到顶部
 const scrollToTop = () => {
@@ -30,6 +31,7 @@ onMounted(() => {
       </section>
       <section class="box2">
         <Chart3 />
+        <Chart4 />
       </section>
       <section class="box3"></section>
       <section class="box4"></section>
@@ -119,6 +121,7 @@ h2 {
 .chart {
   flex: 1;
   width: 100%;
+  // border: 1px solid blue;
 }
 
 .box1 {
@@ -130,6 +133,9 @@ h2 {
 
 .box2 {
   grid-area: box2;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; //让两个部分分隔开来
 }
 .box3 {
   grid-area: box3;
