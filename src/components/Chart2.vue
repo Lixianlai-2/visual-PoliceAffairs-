@@ -30,7 +30,8 @@ const initEcharts = function () {
 
   myChart.setOption({
     legend: {
-      top: px(10),
+      top: px(10), //说明部分放图表上面
+      // bottom: 0,
       itemHeight: px(15), // 设置说明图例高度
       itemWidth: px(20), // 设置说明图例宽度
       itemGap: px(10), // 设置说明图例的间距
@@ -46,6 +47,7 @@ const initEcharts = function () {
       // 决定x轴的压缩像素，表格往左移动
       x2: px(40), // 表格从右边往左边压缩
       y2: px(60), // 决定表格从下方往上移动
+      // containLabel: true,
     },
     xAxis: {
       type: "value",

@@ -119,14 +119,12 @@ h2 {
 .chart {
   flex: 1;
   width: 100%;
-  // border: 1px solid red;
 }
 
 .box1 {
   grid-area: box1;
   display: flex;
   flex-direction: column;
-  // border: 1px solid red;
   justify-content: space-between; //让两个部分分隔开来
 }
 
