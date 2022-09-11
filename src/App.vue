@@ -3,6 +3,7 @@ import { onMounted } from "@vue/runtime-core";
 import Header from "./components/Header.vue";
 import Chart1 from "./components/Chart1.vue";
 import Chart2 from "./components/Chart2.vue";
+import Chart3 from "./components/Chart3.vue";
 
 // 重新渲染页面时滚动到顶部
 const scrollToTop = () => {
@@ -27,16 +28,37 @@ onMounted(() => {
         <Chart1 />
         <Chart2 />
       </section>
-      <section class="box2"></section>
+      <section class="box2">
+        <Chart3 />
+      </section>
       <section class="box3"></section>
       <section class="box4"></section>
       <section class="box5"></section>
     </main>
+    <footer>
+      <h5>微信号:no1643565650</h5>
+      <h5>手机号:18780352791</h5>
+    </footer>
   </div>
 </template>
 
 <style lang="scss">
 @import "./shared/helper.scss";
+
+footer {
+  height: px(70);
+  border: 2px solid #0d2d59;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: px(20);
+  margin-top: px(20);
+  // flex-direction: column;
+  h5 {
+    padding-right: px(30);
+    color: aliceblue;
+  }
+}
 
 #app {
   display: flex;
@@ -71,7 +93,7 @@ main {
   column-gap: px(25);
   > section {
     border: 1px solid #0e305c;
-    border-radius: 4px;
+    border-radius: px(20);
     // background: #0c0d2e;
     text-align: center;
   }
@@ -83,11 +105,28 @@ main {
   background: #0c0d2e;
 }
 
+h2 {
+  font-size: px(22);
+  line-height: px(24);
+  padding: px(10) px(28);
+  border: 1px solid #04498f;
+  text-shadow: 0 0 2px white;
+  text-align: center;
+  border-bottom-right-radius: px(10);
+  border-bottom-left-radius: px(10);
+}
+
+.chart {
+  flex: 1;
+  width: 100%;
+  // border: 1px solid red;
+}
+
 .box1 {
   grid-area: box1;
   display: flex;
   flex-direction: column;
-  border: 1px solid red;
+  // border: 1px solid red;
   justify-content: space-between; //让两个部分分隔开来
 }
 

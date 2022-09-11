@@ -30,7 +30,7 @@ const initEcharts = function () {
 
   myChart.setOption({
     legend: {
-      top: px(5),
+      top: px(10),
       itemHeight: px(15), // 设置说明图例高度
       itemWidth: px(20), // 设置说明图例宽度
       itemGap: px(10), // 设置说明图例的间距
@@ -128,26 +128,24 @@ const initEcharts = function () {
 @import "../shared/helper.scss";
 
 .案件破获排名 {
-  // margin-top: px(30);
-  // flex: 1;
   height: px(425);
   display: flex;
   flex-direction: column;
   align-items: center;
-  h2 {
-    font-size: px(22);
-    line-height: px(24);
-    padding: px(10) px(28);
-    border: 1px solid #04498f;
-    text-shadow: 0 0 2px white;
-    text-align: center;
-    border-bottom-right-radius: px(10);
-    border-bottom-left-radius: px(10);
-  }
+  // h2 {
+  //   font-size: px(22);
+  //   line-height: px(24);
+  //   padding: px(10) px(28);
+  //   border: 1px solid #04498f;
+  //   text-shadow: 0 0 2px white;
+  //   text-align: center;
+  //   border-bottom-right-radius: px(10);
+  //   border-bottom-left-radius: px(10);
+  // }
 
-  div {
-    flex: 1;
-    width: 100%;
-  }
+  // div {
+  //   flex: 1;
+  //   width: 100%;
+  // }
 }
 </style>
