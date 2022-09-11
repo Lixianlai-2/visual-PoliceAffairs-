@@ -2,10 +2,6 @@
   <div class="bordered 案件破获排名">
     <h2>案件破获排名</h2>
     <div class="chart" ref="chart"></div>
-    <!-- <div class="legend">
-      <span class="first">破案排名1</span>
-      <span class="second">破案排名2</span>
-    </div> -->
   </div>
 </template>
 
@@ -133,8 +129,8 @@ const initEcharts = function () {
 
 .案件破获排名 {
   // margin-top: px(30);
-  flex: 1;
-  height: px(315);
+  // flex: 1;
+  height: px(425);
   display: flex;
   flex-direction: column;
   align-items: center;

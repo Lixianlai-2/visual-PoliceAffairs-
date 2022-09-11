@@ -88,7 +88,7 @@ main {
   display: flex;
   flex-direction: column;
   border: 1px solid red;
-  // justify-content: space-between;
+  justify-content: space-between; //让两个部分分隔开来
 }
 
 .box2 {
