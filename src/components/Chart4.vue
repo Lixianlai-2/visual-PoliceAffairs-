@@ -53,6 +53,8 @@ const initEcharts = function () {
       axisLabel: {
         fontSize: px(12), //设置x轴文字的大小
       },
+      axisTick: { show: false }, //除去表格的x轴的凸起线
+      axisLine: { show: false }, //除去表格的x轴的基本线
     },
     yAxis: {
       type: "value",
