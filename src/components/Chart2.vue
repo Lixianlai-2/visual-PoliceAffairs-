@@ -131,9 +131,9 @@ const initEcharts = function () {
 
 .案件破获排名 {
   height: px(425);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  // display: flex;
+  // flex-direction: column;
+  // align-items: center;
   // h2 {
   //   font-size: px(22);
   //   line-height: px(24);

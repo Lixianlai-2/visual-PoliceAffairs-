@@ -120,8 +120,8 @@ const initEcharts = function () {
 
 .案发趋势分析 {
   height: px(415);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  // display: flex;
+  // flex-direction: column;
+  // align-items: center;
 }
 </style>

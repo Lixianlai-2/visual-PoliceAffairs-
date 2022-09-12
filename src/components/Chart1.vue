@@ -94,9 +94,9 @@ const initEcharts = function () {
 
 .管辖统计 {
   height: px(315);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  // display: flex;
+  // flex-direction: column;
+  // align-items: center;
   // h2 {
   //   font-size: px(22);
   //   line-height: px(24);

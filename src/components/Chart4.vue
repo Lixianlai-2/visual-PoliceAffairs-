@@ -111,8 +111,8 @@ const initEcharts = function () {
 
 .案发时段分析 {
   height: px(320);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  // display: flex;
+  // flex-direction: column;
+  // align-items: center;
 }
 </style>
