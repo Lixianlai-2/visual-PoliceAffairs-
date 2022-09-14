@@ -14,7 +14,7 @@ body {
   background: #000211;
   color: aliceblue;
   /* 去除页面的滚动轮 */
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 #app {

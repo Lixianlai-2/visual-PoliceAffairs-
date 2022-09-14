@@ -97,7 +97,7 @@ main {
   row-gap: px(28);
   column-gap: px(25);
   > section {
-    border: 1px solid #0e305c;
+    // border: 1px solid #0e305c;
     border-radius: px(20);
     text-align: center;
   }
