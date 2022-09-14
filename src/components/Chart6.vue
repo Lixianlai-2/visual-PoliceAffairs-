@@ -9,6 +9,8 @@
 import { ref, onMounted } from "vue";
 import * as echarts from "echarts";
 import px from "../shared/px";
+// import china from "../assets/china.json";
+import "../assets/china";
 
 // 模板引用
 const chart = ref(null);
@@ -19,89 +21,70 @@ onMounted(() => {
 
 const initEcharts = function () {
   // 基于准备好的dom，初始化echarts实例
-  var myChart = echarts.init(chart.value); //
+  var myChart = echarts.init(chart.value);
+  // 注册地图
+  // echarts.registerMap("CN", china);
 
+  const colors = { 青海省: "#BB31F7", 甘肃省: "#15B8FD", 四川省: "#06E1EE" };
+
+  // 配置地图
   myChart.setOption({
-    xAxis: {
-      type: "category",
-      boundaryGap: false,
-      // 添加表格的竖线
-      splitLine: { show: true, lineStyle: { color: "#073E78" } }, //添加表格的竖线
-      data: [
-        "0",
-        "2",
-        "4",
-        "6",
-        "8",
-        "10",
-        "12",
-        "14",
-        "16",
-        "18",
-        "20",
-        "22",
-        "24",
-      ],
-      axisLabel: {
-        fontSize: px(12), //设置x轴文字的大小
-      },
-      axisTick: { show: false }, //除去表格的x轴的凸起线
-      axisLine: { show: false }, //除去表格的x轴的基本线
+    backgroundColor: "#00051a", // 整个容器的背景颜色
+    geo: {
+      type: "map",
+      map: "china",
     },
-    yAxis: {
-      type: "value",
-      splitLine: { show: true, lineStyle: { color: "#073E78" } }, //添加表格的竖线
-      axisLabel: {
-        fontSize: px(12), //设置x轴文字的大小
-      },
-    },
+
     series: [
       {
-        data: [
-          820, 932, 901, 934, 1290, 1330, 1320, 932, 901, 934, 1290, 1330, 1320,
-        ],
-        type: "line", // 折线图
-        areaStyle: {},
-        symbol: "circle", // 数据点的形式
-        symbolSize: px(12), //数据点大小
-        areaStyle: {
-          color: {
-            type: "linear",
-            x: 0,
-            y: 0,
-            x2: 0,
-            y2: 1,
-            colorStops: [
-              {
-                offset: 0,
-                color: "#30367c", // 0% 处的颜色
-              },
-              {
-                offset: 1,
-                color: "#181a4c", // 100% 处的颜色
-              },
-            ],
-            global: false, // 缺省为 false
+        type: "map",
+        map: "china", // 自定义扩展图表类型
+        data: [{ name: "甘肃省", value: 1 }],
+        label: { show: false, color: "white" },
+        itemStyle: {
+          areaColor: "#0c0d2e", // 默认状态的，地图背景颜色
+          borderColor: "#01A7F7",
+          shadowColor: "white",
+          emphasis: {
+            label: { color: "white" }, // hover时冒出的省份名称的字体颜色
+            areaColor: "#5470C6", // hover地图时的背景颜色
+          },
+        },
+        select: {
+          label: {
+            show: false,
+            color: "white",
+          },
+          itemStyle: {
+            areaColor: "#5470C6", // 选中某个省份后的区域颜色
           },
         },
       },
+      {
+        data: [
+          {
+            value: [103, 36],
+          },
+        ],
+        type: "effectScatter",
+        coordinateSystem: "geo",
+        symbolSize: px(21), // 修改散点图大小
+        color: "#f0f8ff",
+      },
     ],
-    // 去除表格的多余空间
-    grid: {
-      x: px(10),
-      x2: px(20),
-      y: px(30),
-      y2: px(30),
-      containLabel: true, //避免挤压导致的表格变形
-    },
   });
 };
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 @import "../shared/helper.scss";
 
 .籍贯分布地 {
   height: px(762);
+  background: #00051a;
+}
+
+h2 {
+  background: #00051a;
 }
 </style>
