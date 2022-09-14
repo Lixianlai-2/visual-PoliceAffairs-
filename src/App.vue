@@ -6,6 +6,7 @@ import Chart2 from "./components/Chart2.vue";
 import Chart3 from "./components/Chart3.vue";
 import Chart4 from "./components/Chart4.vue";
 import Chart5 from "./components/Chart5.vue";
+import Chart6 from "./components/Chart6.vue";
 
 // 重新渲染页面时滚动到顶部
 const scrollToTop = () => {
@@ -37,7 +38,9 @@ onMounted(() => {
       <section class="box3">
         <Chart5 />
       </section>
-      <section class="box4"></section>
+      <section class="box4">
+        <Chart6 />
+      </section>
       <section class="box5"></section>
     </main>
     <footer>
@@ -107,7 +110,8 @@ main {
 .往年战果数对比,
 .案发趋势分析,
 .案件破获排名,
-.管辖统计 {
+.管辖统计,
+.籍贯分布地 {
   display: flex;
   flex-direction: column;
   align-items: center;

@@ -20,13 +20,6 @@ onMounted(() => {
 });
 
 const initEcharts = function () {
-  const scrollToTop = () => {
-    let sTop = document.documentElement.scrollTop || document.body.scrollTop;
-    if (sTop > 0) {
-      window.requestAnimationFrame(scrollToTop);
-      window.scrollTo(0, sTop - sTop / 8);
-    }
-  };
 
   // 基于准备好的dom，初始化echarts实例
   var myChart = echarts.init(chart.value); //

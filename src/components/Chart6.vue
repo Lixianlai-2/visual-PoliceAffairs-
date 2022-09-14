@@ -1,6 +1,6 @@
 <template>
-  <div class="bordered 案发时段分析">
-    <h2>案发时段分析</h2>
+  <div class="bordered 籍贯分布地">
+    <h2>全市犯罪人员籍贯分布地</h2>
     <div class="chart" ref="chart"></div>
   </div>
 </template>
@@ -101,10 +101,7 @@ const initEcharts = function () {
 <style lang="scss">
 @import "../shared/helper.scss";
 
-.案发时段分析 {
-  height: px(320);
-  // display: flex;
-  // flex-direction: column;
-  // align-items: center;
+.籍贯分布地 {
+  height: px(762);
 }
 </style>
