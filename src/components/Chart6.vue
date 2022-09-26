@@ -71,6 +71,28 @@ const initEcharts = function () {
         symbolSize: px(21), // 修改散点图大小
         color: "#f0f8ff",
       },
+      {
+        data: [
+          {
+            value: [104, 30],
+          },
+        ],
+        type: "effectScatter",
+        coordinateSystem: "geo",
+        symbolSize: px(21), // 修改散点图大小
+        color: "#73c0de",
+      },
+      {
+        data: [
+          {
+            value: [110, 39],
+          },
+        ],
+        type: "effectScatter",
+        coordinateSystem: "geo",
+        symbolSize: px(21), // 修改散点图大小
+        color: "#ee6666",
+      },
     ],
   });
 };
