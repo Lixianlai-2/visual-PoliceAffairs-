@@ -7,6 +7,7 @@ import Chart3 from "./components/Chart3.vue";
 import Chart4 from "./components/Chart4.vue";
 import Chart5 from "./components/Chart5.vue";
 import Chart6 from "./components/Chart6.vue";
+import Chart7 from "./components/Chart7.vue";
 
 // 重新渲染页面时滚动到顶部
 const scrollToTop = () => {
@@ -40,6 +41,12 @@ onMounted(() => {
       </section>
       <section class="box4">
         <Chart6 />
+        <div class="bordered 年龄段分布">
+          <h2>犯罪人员年龄段分布</h2>
+          <div class="chart">
+            <Chart7 />
+          </div>
+        </div>
       </section>
       <section class="box5"></section>
     </main>
@@ -111,10 +118,16 @@ main {
 .案发趋势分析,
 .案件破获排名,
 .管辖统计,
-.籍贯分布地 {
+.籍贯分布地,
+.年龄段分布 {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+.年龄段分布 {
+  margin-top: px(30);
+  flex: 1;
+  // border: 1px solid red;
 }
 
 .bordered {
@@ -154,12 +167,16 @@ h2 {
   justify-content: space-between; //让两个部分分隔开来
 }
 .box3 {
+  // border: 1px solid red;
   grid-area: box3;
   display: flex;
   flex-direction: column;
 }
 .box4 {
   grid-area: box4;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 .box5 {
   grid-area: box5;

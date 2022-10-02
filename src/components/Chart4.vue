@@ -19,7 +19,7 @@ onMounted(() => {
 
 const initEcharts = function () {
   // 基于准备好的dom，初始化echarts实例
-  var myChart = echarts.init(chart.value); //
+  var myChart = echarts.init(chart.value); 
 
   myChart.setOption({
     xAxis: {

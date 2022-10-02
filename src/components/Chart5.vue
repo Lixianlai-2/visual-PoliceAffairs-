@@ -56,7 +56,8 @@
 @import "../shared/helper.scss";
 
 .往年战果数对比 {
-  height: px(315);
+  // height: px(315);
+  flex: 1;
 }
 
 .战果 {

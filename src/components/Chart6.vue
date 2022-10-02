@@ -68,7 +68,7 @@ const initEcharts = function () {
         ],
         type: "effectScatter",
         coordinateSystem: "geo",
-        symbolSize: px(21), // 修改散点图大小
+        symbolSize: px(15), // 修改散点图大小
         color: "#f0f8ff",
       },
       {
@@ -79,7 +79,7 @@ const initEcharts = function () {
         ],
         type: "effectScatter",
         coordinateSystem: "geo",
-        symbolSize: px(21), // 修改散点图大小
+        symbolSize: px(15), // 修改散点图大小
         color: "#73c0de",
       },
       {
@@ -90,7 +90,7 @@ const initEcharts = function () {
         ],
         type: "effectScatter",
         coordinateSystem: "geo",
-        symbolSize: px(21), // 修改散点图大小
+        symbolSize: px(15), // 修改散点图大小
         color: "#ee6666",
       },
     ],
