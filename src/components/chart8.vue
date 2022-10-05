@@ -1,7 +1,7 @@
 <template>
-  <div class="年龄段-图1">
+  <div class="年龄段-图2">
     <div class="chart" ref="chart"></div>
-    <div class="label">性别</div>
+    <div class="label">年龄段</div>
   </div>
 </template>
 
@@ -44,7 +44,7 @@ const initEcharts = function () {
       trigger: "item",
     },
     legend: {
-      bottom: px(0),
+      bottom: px(-10),
       itemHeight: px(15), // 设置说明图例高度
       itemWidth: px(20), // 设置说明图例宽度
       itemGap: px(10), // 设置说明图例的间距
@@ -69,8 +69,11 @@ const initEcharts = function () {
         },
         labelLine: { show: false },
         data: [
-          { value: 0.8, name: "男" },
-          { value: 0.2, name: "女" },
+          { value: 0.2, name: "20-30" },
+          { value: 0.1, name: "30-40" },
+          { value: 0.3, name: "40-50" },
+          { value: 0.1, name: "50-60" },
+          { value: 0.3, name: "10-20" },
         ],
       },
     ],
@@ -81,8 +84,8 @@ const initEcharts = function () {
 <style lang="scss" scoped>
 @import "../shared/helper.scss";
 
-.年龄段-图1 {
-  // border: 1px solid red;
+.年龄段-图2 {
+  //   border: 1px solid red;
   width: px(300);
   display: flex;
   position: relative;

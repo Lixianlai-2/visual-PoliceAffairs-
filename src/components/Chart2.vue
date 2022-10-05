@@ -18,8 +18,6 @@ onMounted(() => {
 });
 
 const initEcharts = function () {
- 
-
   var myChart = echarts.init(chart.value); //
 
   myChart.setOption({
