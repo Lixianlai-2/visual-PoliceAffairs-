@@ -79,18 +79,16 @@ const initEcharts = function () {
         type: "bar",
         data: [1, 2, 3, 4, 5, 6, 7, 8, 9],
         itemStyle: {
-          normal: {
-            color: new echarts.graphic.LinearGradient(0, 0, 1, 0, [
-              {
-                offset: 0,
-                color: "#1f36f9",
-              },
-              {
-                offset: 1,
-                color: "#059fff",
-              },
-            ]),
-          },
+          color: new echarts.graphic.LinearGradient(0, 0, 1, 0, [
+            {
+              offset: 0,
+              color: "#1f36f9",
+            },
+            {
+              offset: 1,
+              color: "#059fff",
+            },
+          ]),
         },
       },
       {
@@ -98,18 +96,16 @@ const initEcharts = function () {
         type: "bar",
         data: [2, 3, 4, 5, 6, 7, 8, 9, 10],
         itemStyle: {
-          normal: {
-            color: new echarts.graphic.LinearGradient(0, 0, 1, 0, [
-              {
-                offset: 0,
-                color: "#b82be8",
-              },
-              {
-                offset: 1,
-                color: "#6670e2",
-              },
-            ]),
-          },
+          color: new echarts.graphic.LinearGradient(0, 0, 1, 0, [
+            {
+              offset: 0,
+              color: "#b82be8",
+            },
+            {
+              offset: 1,
+              color: "#6670e2",
+            },
+          ]),
         },
       },
     ],

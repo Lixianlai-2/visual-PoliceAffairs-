@@ -101,13 +101,13 @@ h2 {
 }
 
 .label {
-  // border: 1px solid green;
+  // 绝对定位居中
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   font-weight: bold;
-  text-shadow: 0 0 px(20) #33a4fa;
+  text-shadow: 0 0 px(20) #33a4fa; //设置文字阴影
   color: #33a4fa;
   font-size: px(40);
 }

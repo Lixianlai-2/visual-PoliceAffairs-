@@ -1,5 +1,5 @@
 <template>
-  <div class="年龄段-图3">
+  <div class="案发类型统计-表格">
     <div class="chart" ref="chart"></div>
   </div>
 </template>
@@ -90,7 +90,7 @@ const initEcharts = function () {
 <style lang="scss" scoped>
 @import "../shared/helper.scss";
 
-.年龄段-图3 {
+.案发类型统计-表格 {
   //   border: 1px solid red;
   width: px(300);
   display: flex;
@@ -104,17 +104,5 @@ h2 {
 
 .chart {
   flex: 1;
-}
-
-.label {
-  // border: 1px solid green;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-weight: bold;
-  text-shadow: 0 0 px(20) #33a4fa;
-  color: #33a4fa;
-  font-size: px(40);
 }
 </style>

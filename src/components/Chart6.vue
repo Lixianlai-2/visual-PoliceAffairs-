@@ -45,10 +45,10 @@ const initEcharts = function () {
           areaColor: "#0c0d2e", // 默认状态的，地图背景颜色
           borderColor: "#01A7F7",
           shadowColor: "white",
-          emphasis: {
-            label: { color: "white" }, // hover时冒出的省份名称的字体颜色
-            areaColor: "#5470C6", // hover地图时的背景颜色
-          },
+        },
+        emphasis: {
+          label: { color: "white" }, // hover时冒出的省份名称的字体颜色
+          areaColor: "#5470C6", // hover地图时的背景颜色
         },
         select: {
           label: {

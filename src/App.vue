@@ -10,6 +10,7 @@ import Chart6 from "./components/Chart6.vue";
 import Chart7 from "./components/Chart7.vue";
 import Chart8 from "./components/chart8.vue";
 import Chart9 from "./components/chart9.vue";
+import Chart10 from "./components/Chart10.vue";
 
 // 重新渲染页面时滚动到顶部
 const scrollToTop = () => {
@@ -52,7 +53,19 @@ onMounted(() => {
           </div>
         </div>
       </section>
-      <section class="box5"></section>
+      <section class="box5">
+        <div className="bordered row1 案发类型">
+          <h2>案发类型统计</h2>
+          <div className="charts"></div>
+        </div>
+        <div className="bordered row2 案发街道">
+          <h2>案发街道统计</h2>
+          <div className="charts"></div>
+        </div>
+        <div className="bordered row3 作案手段">
+          <h2>作案手段分析</h2>
+        </div>
+      </section>
     </main>
     <footer>
       <h5>微信号:no1643565650</h5>
@@ -123,11 +136,17 @@ main {
 .案件破获排名,
 .管辖统计,
 .籍贯分布地,
-.年龄段分布 {
+.年龄段分布,
+.案发类型 {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
+
+.案发类型 {
+  height: px(300);
+}
+
 .年龄段分布 {
   margin-top: px(30);
   flex: 1;
@@ -160,6 +179,7 @@ h2 {
 .chart {
   flex: 1;
   width: 100%;
+  display: flex;
   // border: 1px solid blue;
 }
 
@@ -190,5 +210,20 @@ h2 {
 }
 .box5 {
   grid-area: box5;
+  border: 1px solid red;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  > .row1 {
+    height: px(317);
+  }
+
+  > .row2 {
+    height: px(317);
+  }
+
+  > .row3 {
+    height: px(455);
+  }
 }
 </style>
