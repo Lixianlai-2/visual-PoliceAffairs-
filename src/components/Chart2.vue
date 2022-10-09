@@ -119,23 +119,5 @@ const initEcharts = function () {
 
 .案件破获排名 {
   height: px(425);
-  // display: flex;
-  // flex-direction: column;
-  // align-items: center;
-  // h2 {
-  //   font-size: px(22);
-  //   line-height: px(24);
-  //   padding: px(10) px(28);
-  //   border: 1px solid #04498f;
-  //   text-shadow: 0 0 2px white;
-  //   text-align: center;
-  //   border-bottom-right-radius: px(10);
-  //   border-bottom-left-radius: px(10);
-  // }
-
-  // div {
-  //   flex: 1;
-  //   width: 100%;
-  // }
 }
 </style>

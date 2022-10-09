@@ -9,7 +9,6 @@
 import { ref, onMounted } from "vue";
 import * as echarts from "echarts";
 import px from "../shared/px";
-// import china from "../assets/china.json";
 import "../assets/china";
 
 // 模板引用

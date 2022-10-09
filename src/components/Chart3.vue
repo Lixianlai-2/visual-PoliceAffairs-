@@ -18,8 +18,6 @@ onMounted(() => {
 });
 
 const initEcharts = function () {
-
-
   // 基于准备好的dom，初始化echarts实例
   var myChart = echarts.init(chart.value); //
 
@@ -114,8 +112,5 @@ const initEcharts = function () {
 
 .案发趋势分析 {
   height: px(415);
-  // display: flex;
-  // flex-direction: column;
-  // align-items: center;
 }
 </style>
