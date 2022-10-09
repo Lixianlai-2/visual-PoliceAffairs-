@@ -22,23 +22,7 @@ onMounted(() => {
 const initEcharts = function () {
   // 基于准备好的dom，初始化echarts实例
   var myChart = echarts.init(chart.value);
-  // 注册地图
-  // echarts.registerMap("CN", china);
 
-  const colors = { 青海省: "#BB31F7", 甘肃省: "#15B8FD", 四川省: "#06E1EE" };
-
-  // legend: {
-  //     bottom: px(0),
-  //     itemHeight: px(15), // 设置说明图例高度
-  //     itemWidth: px(20), // 设置说明图例宽度
-  //     itemGap: px(10), // 设置说明图例的间距
-  //     textStyle: {
-  //       fontSize: px(12), //修改说明文字的大小
-  //       color: "#fbe4ae",
-  //       padding: [0, 0, 0, -3], //设置文字跟说明图例之间的距离
-  //     },
-  //   },
-  // 配置地图
   myChart.setOption({
     tooltip: {
       trigger: "item",

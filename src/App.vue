@@ -60,8 +60,7 @@ onMounted(() => {
           <h2>案发类型统计</h2>
           <div className="chart">
             <Chart10 />
-            <!-- <Chart11 />
-            <Chart12 /> -->
+            <Chart11 />
           </div>
         </div>
         <div className="bordered row2 案发街道">
@@ -181,6 +180,7 @@ h2 {
   width: 100%;
   display: flex;
   // border: 1px solid blue;
+  justify-content: space-around;
 }
 
 .box1 {
@@ -210,7 +210,6 @@ h2 {
 }
 .box5 {
   grid-area: box5;
-  border: 1px solid red;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
