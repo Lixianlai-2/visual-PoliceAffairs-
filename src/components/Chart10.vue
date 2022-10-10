@@ -25,7 +25,14 @@ const initEcharts = function () {
     //   fontSize: px(12),
     // },
     xAxis: {
-      data: ["入室抢劫", "当街偷盗", "团伙诈骗", "刑事案件", "民事案件"],
+      data: [
+        "入室抢劫",
+        "当街偷盗",
+        "团伙诈骗",
+        "刑事案件",
+        "民事案件",
+        "入室抢劫",
+      ],
       axisLabel: {
         fontSize: px(12),
         formatter(val) {
