@@ -42,7 +42,7 @@ const initEcharts = function () {
       {
         name: "性别",
         type: "pie",
-        radius: ["40%", "70%"], // 让饼图中间变空
+        radius: ["50%", "70%"], // 让饼图中间变空
         label: {
           position: "inside", //设置标签的位置
           formatter(options) {
