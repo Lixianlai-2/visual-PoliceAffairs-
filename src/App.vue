@@ -14,6 +14,7 @@ import Chart10 from "./components/Chart10.vue";
 import Chart11 from "./components/Chart11.vue";
 import Chart12 from "./components/Chart12.vue";
 import Chart13 from "./components/Chart13.vue";
+import Chart14 from "./components/Chart14.vue";
 
 // 重新渲染页面时滚动到顶部
 const scrollToTop = () => {
@@ -73,7 +74,9 @@ onMounted(() => {
         </div>
         <div className="bordered row3 作案手段">
           <h2>作案手段分析</h2>
-          <div className="chart"></div>
+          <div className="chart">
+            <Chart14 />
+          </div>
         </div>
       </section>
     </main>
