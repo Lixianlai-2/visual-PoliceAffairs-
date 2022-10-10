@@ -195,7 +195,7 @@ const initEcharts = function () {
       },
     ],
   };
-
+  
   let getItem = () => {
     for (let i = 0; i <= 8; i++) {
       options.series[0].data[i] = Math.round(Math.random() * 9);

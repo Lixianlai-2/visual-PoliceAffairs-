@@ -112,9 +112,9 @@ const initEcharts = function () {
 
   let newData = [
     { value: 0.08, name: "东岗路" },
-    { value: 0.06, name: "段家滩" },
-    { value: 0.11, name: "雁北" },
-    { value: 0.09, name: "五泉山" },
+    { value: 0.04, name: "段家滩" },
+    { value: 0.19, name: "雁北" },
+    { value: 0.15, name: "五泉山" },
     { value: 0.12, name: "中山路" },
     { value: 0.06, name: "庆阳路" },
     { value: 0.08, name: "武都路" },
@@ -123,11 +123,13 @@ const initEcharts = function () {
   ];
 
   let getItem = (newData) => {
+    // 更改图标数据
     for (let i = 0; i <= 8; i++) {
       options.series[0].data[i].value =
         newData[i].value * Math.round(Math.random() * 2);
     }
-    myChart.setOption(options, true);
+
+    myChart.setOption(options, true); // 重新渲染图标
   };
 
   setInterval(() => {
