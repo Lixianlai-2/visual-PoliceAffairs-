@@ -65,7 +65,9 @@ onMounted(() => {
         </div>
         <div className="bordered row2 案发街道">
           <h2>案发街道统计</h2>
-          <div className="chart"></div>
+          <div className="chart">
+            <Chart12 />
+          </div>
         </div>
         <div className="bordered row3 作案手段">
           <h2>作案手段分析</h2>

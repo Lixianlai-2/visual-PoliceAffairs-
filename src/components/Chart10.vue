@@ -1,5 +1,5 @@
 <template>
-  <div class="案发类型统计-饼图">
+  <div class="案发类型统计-表格">
     <div class="chart" ref="chart"></div>
   </div>
 </template>
@@ -53,6 +53,19 @@ const initEcharts = function () {
         name: "销量",
         type: "bar",
         data: [40, 22, 20, 18, 32],
+        // 给表格设置渐变色
+        itemStyle: {
+          color: new echarts.graphic.LinearGradient(0, 0, 1, 0, [
+            {
+              offset: 0,
+              color: "#1f36f9",
+            },
+            {
+              offset: 1,
+              color: "#059fff",
+            },
+          ]),
+        },
       },
     ],
     // 去除表格的多余空间
@@ -69,16 +82,8 @@ const initEcharts = function () {
 <style lang="scss" scoped>
 @import "../shared/helper.scss";
 
-.案发类型统计-饼图 {
+.案发类型统计-表格 {
   width: px(300);
   display: flex;
-}
-
-h2 {
-  background: #00051a;
-}
-
-.chart {
-  flex: 1;
 }
 </style>

@@ -1,5 +1,5 @@
 <template>
-  <div class="案发类型统计-表格">
+  <div class="案发类型统计-饼图">
     <div class="chart" ref="chart"></div>
   </div>
 </template>
@@ -75,19 +75,8 @@ const initEcharts = function () {
 <style lang="scss" scoped>
 @import "../shared/helper.scss";
 
-.案发类型统计-表格 {
-  //   border: 1px solid red;
+.案发类型统计-饼图 {
   width: px(300);
   display: flex;
-  // position: relative;
-  // height: px(300);
-}
-
-h2 {
-  background: #00051a;
-}
-
-.chart {
-  flex: 1;
 }
 </style>
